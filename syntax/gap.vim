@@ -93,7 +93,7 @@ hi def link gapFunLine Type
 
 " TODO: The below list is probably not exhaustive.  Look through the
 " docs and get the complete list.
-syn match	gapOper	"\(:=\|!=\|>=\|<=\|>\|<\|=\)"
+syn match	gapOper	"\(:=\|!=\|>=\|<=\|>\|<\|=\|!\.\|\.\.\)"
 
 syn match    gCustomFunc     "\w\+\s*(" contains=gapParentheses
 hi def link gCustomFunc Function
