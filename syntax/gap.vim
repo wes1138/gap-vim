@@ -25,7 +25,7 @@ elseif exists("b:current_syntax")
 endif
 
 " comments
-syn match gapComment "\(#.*\)*" contains=gapTodo,gapFunLine
+syn match gapComment "\(#.*\)*" contains=gapTodo,gapFunLine,gapNote
 
 " strings and characters
 syn region gapString  start=+"+ end=+\([^\\]\|^\)\(\\\\\)*"+
@@ -36,6 +36,9 @@ syn match gapChar +'\\"'+
 " must do
 syn keyword gapTodo TODO contained
 syn keyword gapTodo XXX contained
+
+" Notes, Remarks, etc:
+syn match gapNote '#\s*\u\w*:'hs=s+1,he=e-1 contained contains=gapTodo
 
 " basic infos in file and folded lines
 syn match gapFunLine '^#[FVOMPCAW] .*$' contained
@@ -81,8 +84,9 @@ hi def link gapConditional Statement
 hi def link gapRepeat Statement
 hi def link gapComment Comment
 hi def link gapTodo  Todo
-hi link gapTTodoComment  gapTodo
-hi link gapTodoComment	gapComment
+hi def link gapNote  PreProc
+" hi link gapTTodoComment  gapTodo
+" hi link gapTodoComment	gapComment
 hi def link gapNumber Constant
 hi def link gapBool Constant
 hi def link gapChar Constant
