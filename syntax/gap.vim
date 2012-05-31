@@ -85,8 +85,6 @@ hi def link gapRepeat Statement
 hi def link gapComment Comment
 hi def link gapTodo  Todo
 hi def link gapNote  PreProc
-" hi link gapTTodoComment  gapTodo
-" hi link gapTodoComment	gapComment
 hi def link gapNumber Constant
 hi def link gapBool Constant
 hi def link gapChar Constant
@@ -140,16 +138,12 @@ func! GAPFoldLevel(n)
   return (indent(n)+3)/4
 endfunc
 
-" enable folding and much better indenting in  vim >= 6.0
+" enable folding in vim >= 6.0
 if version>=600
   syn sync fromstart
   set foldmethod=expr
   set foldminlines=3
   set foldexpr=GAPFoldLevel(v:lnum)
-  " load the indent file
-  " I don't think you need to source the indent file if it is already in the
-  " indent directory
-  "runtime indent/gap.vim
 endif
 
 let b:current_syntax = "gap"
