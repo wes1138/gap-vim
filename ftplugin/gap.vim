@@ -1,5 +1,8 @@
 " Filetype plugin for gap.
 
+" set sensible format options:
+set formatoptions+=r
+
 " This adds word under cursor to local variables list.
 noremap <S-F4> miviwy?\<local\><CR>/;<CR>i, <ESC>p`i
 noremap! <S-F4> <ESC>miviwy?\<local\><CR>/;<CR>i, <ESC>p`ia
