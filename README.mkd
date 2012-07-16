@@ -8,13 +8,13 @@ Installation / Usage
 --------------------
 
 If you have the [pathogen] plugin, you can just put the root (`gap-vim`) under
-`.vim/bundle`, perhaps via:
+`~/.vim/bundle`, perhaps via:
 
-	$ cd .vim/bundle/
+	$ cd ~/.vim/bundle/
 	$ git clone https://github.com/wes1138/gap-vim.git
 
-Else, just treat `.vim/` as the root, and merge the files to their respective
-directories (e.g., copy `ftplugin/gap.vim` to `.vim/ftplugin/gap.vim`).
+Else, just treat `~/.vim/` as the root, and merge the files to their respective
+directories (e.g., copy `ftplugin/gap.vim` to `.vim/ftplugin/gap.vim`, etc.).
 
 
 Acknowledgements
