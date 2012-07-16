@@ -1,0 +1,30 @@
+GAP-Vim
+=======
+
+A Vim filetype plugin, syntax file, and indentation file for [GAP] code.
+
+
+Installation / Usage
+--------------------
+
+If you have the [pathogen] plugin, you can just put the root (`gap-vim`) under
+`.vim/bundle`, perhaps via:
+
+	$ cd .vim/bundle/
+	$ git clone https://github.com/wes1138/gap-vim.git
+
+Else, just treat `.vim/` as the root, and merge the files to their respective
+directories (e.g., copy `ftplugin/gap.vim` to `.vim/ftplugin/gap.vim`).
+
+
+Acknowledgements
+----------------
+
+These files are based heavily on the original work of the GAP maintainers.
+Some modest improvements have been made to the syntax file, and the file
+layout has been changed to agree with Vim's current standards.
+
+<!--  links  -->
+[GAP]: http://www.gap-system.org/
+[pathogen]: http://www.vim.org/scripts/script.php?script_id=2332
+
