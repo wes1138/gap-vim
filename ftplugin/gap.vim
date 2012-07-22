@@ -10,7 +10,9 @@ noremap! <S-F4> <ESC>miviwy?\<local\><CR>/;<CR>i, <ESC>p`ia
 " for word completion, fall back to list of GAP global variable names
 " (after loading your favourite packages in GAP say:
 " for w in NamesGVars() do AppendTo("~/.vim/GAPWORDS",w,"\n"); od;    )
-set complete=.,w,b,u,t,i,k$VIMHOME/resources/complete/gapwords.txt
+" for Windows compatibility, determine the home directory dynamically:
+let $VIMHOMEDIR=split(&runtimepath,',')[0]
+set complete=.,w,b,u,t,i,k$VIMHOMEDIR/GAPWORDS
 
 " For when you don't really know the function that you want, but would
 " like to browse the options, this will bring up the completion list
