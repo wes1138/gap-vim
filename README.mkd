@@ -14,7 +14,18 @@ If you have the [pathogen] plugin, you can just put the root (`gap-vim`) under
 	$ git clone https://github.com/wes1138/gap-vim.git
 
 Else, just treat `~/.vim/` as the root, and merge the files to their respective
-directories (e.g., copy `ftplugin/gap.vim` to `.vim/ftplugin/gap.vim`, etc.).
+directories (e.g., copy `ftplugin/gap.vim` to `~/.vim/ftplugin/gap.vim`, etc.).
+
+It will likely be convenient to automatically recognize files with certain
+extensions as gap files.  For this, you can add the following lines to your
+`~/.vim/filetype.vim`:
+
+	augroup filetypedetect
+		au! BufRead,BufNewFile *.g        setfiletype gap
+		au! BufRead,BufNewFile *.gi       setfiletype gap
+		au! BufRead,BufNewFile *.gd       setfiletype gap
+		au! BufRead,BufNewFile .gaprc     setfiletype gap
+	augroup END
 
 
 Acknowledgements
