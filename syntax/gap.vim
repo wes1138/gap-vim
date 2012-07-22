@@ -101,12 +101,6 @@ syn match    gCustomFunc     "\w\+\s*(" contains=gapParentheses
 hi def link gCustomFunc Function
 hi def link gapOper Type
 
-" modify some of the standard attributes:
-hi Statement gui=bold cterm=bold
-hi def link Operator Statement
-hi PreProc gui=bold cterm=bold
-hi Underlined gui=bold cterm=bold
-
 syn sync maxlines=500
 
 " an ex function which returns a `fold level' for line n of the current
