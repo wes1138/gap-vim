@@ -12,7 +12,7 @@ noremap! <S-F4> <ESC>miviwy?\<local\><CR>/;<CR>i, <ESC>p`ia
 " for w in NamesGVars() do AppendTo("~/.vim/GAPWORDS",w,"\n"); od;    )
 " for Windows compatibility, determine the home directory dynamically:
 let $VIMHOMEDIR=split(&runtimepath,',')[0]
-set complete=.,w,b,u,t,i,k$VIMHOMEDIR/GAPWORDS
+set complete=.,w,b,u,t,i,k$VIMHOMEDIR/resources/complete/gapwords.txt
 
 " For when you don't really know the function that you want, but would
 " like to browse the options, this will bring up the completion list
